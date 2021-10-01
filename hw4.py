@@ -106,7 +106,7 @@ class Stall:
        return quantity * self.cost
         
     def __str__(self):
-        return "Hello, we are " + (self.name) + "This is the current menu" + ", " .join(self.inventory.keys()) + "We charge $" + str(self.cost) + "per item. We have $" + str(self.earnings) + "in total."
+        return "Hello, we are " + (self.name) + " This is the current menu " + ", " .join(self.inventory.keys()) + " We charge $" + str(self.cost) + "per item. We have $" + str(self.earnings) + " in total."
         
 
 class TestAllMethods(unittest.TestCase):
@@ -261,6 +261,7 @@ def main():
     customer_2.validate_order(cashier_2, stall_2, "Fries", 1)
     customer_3.validate_order(cashier_2, stall_2, "Tomatoes", 2)
 
+    print(Stall.__str__(stall_1))
 if __name__ == "__main__":
 	main()
 	print("\n")
